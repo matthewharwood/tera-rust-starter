@@ -1,0 +1,131 @@
+{
+  "pages":
+  [
+    {
+      "url": "/",
+      "template_name": "index.html",
+      "metadata": {
+        "title": "homepage"
+      },
+      "data": [
+        {
+          "TextInput": {
+            "label": "Root text input",
+            "input_type": "text"
+          }
+        },
+        {
+          "Heading": {
+            "text_content": "Heading Test",
+            "alt": "Heading Alt Test"
+          }
+        }
+      ]
+    },
+    {
+      "url": "/work/",
+      "template_name": "work/index.html",
+      "metadata": {
+        "title": "homepage"
+      },
+      "data": [
+        {
+          "TextInput": {
+            "label": "Work text input",
+            "input_type": "text"
+          }
+        },
+        {
+          "Heading": {
+            "text_content": "Heading Test",
+            "alt": "Heading Alt Test"
+          }
+        }
+      ]
+    },
+    {
+      "url": "/work/1234/",
+      "template_name": "work/[id]/index.html",
+      "metadata": {
+        "title": "homepage"
+      },
+      "data": [
+        {
+          "TextInput": {
+            "label": "Root text input",
+            "input_type": "text"
+          }
+        },
+        {
+          "Heading": {
+            "text_content": "Heading Test",
+            "alt": "Heading Alt Test"
+          }
+        }
+      ]
+    },
+    {
+      "url": "/profile/",
+      "template_name": "profile/index.html",
+      "metadata": {
+        "title": "homepage"
+      },
+      "data": [
+        {
+          "TextInput": {
+            "label": "Work text input",
+            "input_type": "text"
+          }
+        },
+        {
+          "Heading": {
+            "text_content": "Heading Test",
+            "alt": "Heading Alt Test"
+          }
+        }
+      ]
+    },
+    {
+      "url": "/lab/",
+      "template_name": "lab/index.html",
+      "metadata": {
+        "title": "homepage"
+      },
+      "data": [
+        {
+          "TextInput": {
+            "label": "Work text input",
+            "input_type": "text"
+          }
+        },
+        {
+          "Heading": {
+            "text_content": "Heading Test",
+            "alt": "Heading Alt Test"
+          }
+        }
+      ]
+    },
+    {
+      "url": "/lab/1234/",
+      "template_name": "lab/[id]/index.html",
+      "metadata": {
+        "title": "homepage"
+      },
+      "data": [
+        {
+          "TextInput": {
+            "label": "Root text input",
+            "input_type": "text"
+          }
+        },
+        {
+          "Heading": {
+            "text_content": "Heading Test",
+            "alt": "Heading Alt Test"
+          }
+        }
+      ]
+    }
+  ]
+}
