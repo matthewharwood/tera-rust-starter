@@ -4,5 +4,170 @@
 
 
 {% block content %}
-    {{ macros::input(label=page.data[0].TextInput.label, input_type=page.data[0].TextInput.input_type) }}
+<main class="hp-grid">
+    <div class="hp-grid-info">
+        <header>
+            <div>
+                <div class="hp-grid-info-headline">
+                    <h1 class="hp-grid-info-headline-h1">Good <br/>Morning <br/>Harwood</h1>
+                    <mh-date-ticker><span slot="year">2023</span></mh-date-ticker>
+                    <div class="hp-grid-info-hr"></div>
+                </div>
+                <mh-social>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img alt="Linkedin social icon" src="./static/img/linkedin.svg"/>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img alt="X formally Twitter social icon" src="./static/img/x.svg"/>
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img alt="Facebook social icon" src="./static/img/facebook.svg"/>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img alt="Gmail social icon" src="./static/img/gmail.svg"/>
+                                <span>Gmail</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img alt="Instagram social icon" src="./static/img/instagram.svg"/>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img alt="Discord social icon" src="./static/img/discord.svg"/>
+                                <span>Discord</span>
+                            </a>
+                        </li>
+                    </ul>
+                </mh-social>
+            </div>
+
+            <div class="hp-subheader">
+                <div class="hp-subheader-grid">
+                    <div class="hp-subheader-video-wrapper">
+                        <video autoplay class="hp-subheader-video" loop muted>
+                            <source
+                                    src="https://res.cloudinary.com/morningharwood/video/upload/f_auto:video,q_auto/v1/Profile/matthew-harwood-wavy_q68pdb"
+                                    type="video/webm"/>
+                        </video>
+                    </div>
+                    <div class="hp-subheader-info-wrapper">
+                        <p class="hp-subheader-desc">A portfolio by Matthew Harwood </p>
+                        <p class="hp-subheader-position">Engineering Manager</p>
+                        <p class="hp-subheader-company">@ UBER | PRESENT</p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="hp-grid-right">
+        <div class="hp-grid-aside-wrapper">
+            <div class="hp-grid-aside-transform">
+                <mh-running-header class="hp-grid-aside">
+                    <span class="running-header-stamp" slot="running-header-stamp">Contact me about</span>
+                    <a class="running-header-token" href="mailto:matthhar12@gmail.com" slot="running-header-value">People
+                        Management</a>
+                </mh-running-header>
+            </div>
+        </div>
+        <div class="hp-grid-nav">
+            <nav>
+                <ul>
+                    <mh-nav-link route="route-work"><a href="">
+                        <span>Work</span> <span class="hp-nav-number">01</span></a>
+                    </mh-nav-link>
+                    <mh-nav-link route="route-lab">
+                        <a href=""><span>Lab</span> <span class="hp-nav-number">02</span></a>
+                    </mh-nav-link>
+                    <mh-nav-link route="route-profile">
+                        <a href=""><span>Profile</span> <span class="hp-nav-number">03</span></a>
+                    </mh-nav-link>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <mh-logo>
+        <div class="hp-logo-inner"></div>
+
+        <video autoplay class="hp-logo-video" data-route="route-work" loop muted>
+            <source
+                    class="hp-logo-video-src"
+                    src="https://res.cloudinary.com/morningharwood/video/upload/v1696720510/portfolio-2024/uber-work.webm"
+                    type="video/webm"/>
+        </video>
+        <video autoplay class="hp-logo-video" data-route="route-lab" loop muted>
+            <source
+                    class="hp-logo-video-src"
+                    src="https://res.cloudinary.com/morningharwood/video/upload/v1696720510/portfolio-2024/eyi0uxe7mbgah5kagz0s.webm"
+                    type="video/webm"/>
+        </video>
+        <video autoplay class="hp-logo-video" data-route="route-profile" loop muted>
+            <source
+                    class="hp-logo-video-src"
+                    src="https://res.cloudinary.com/morningharwood/video/upload/f_auto:video,q_auto/v1/Profile/matthew-harwood-wavy_q68pdb"
+                    type="video/webm"/>
+        </video>
+    </mh-logo>
+</main>
+<template id="mh-date-ticker">
+    <slot name="year">2023</slot>
+</template>
+<template id="mh-running-header">
+    <style>
+        :host {
+            --visibility: hidden;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .envelope-wrapper {
+            position: relative;
+
+        }
+
+        .envelope-right {
+            opacity: 0;
+            visibility: var(--visibility);
+            position: absolute;
+            left: 50%;
+            transform: translate3d(-50%, 0%, 0);
+            top: -100%;
+            animation: volcano ease-in-out 750ms;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes volcano {
+            from {
+                transform: translate3d(-50%, 0%, 0);
+                opacity: 1;
+            }
+            to {
+                transform: translate3d(-50%, -175%, 0);
+                opacity: 0;
+            }
+        }
+    </style>
+    <slot name="running-header-stamp"></slot>
+    <span class="envelope-wrapper">
+
+      <slot name="running-header-value"></slot>
+      <div class="envelope-right">✉️</div>
+    </span>
+</template>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="./dist/main.modern.js" type="module"></script>
 {% endblock content %}

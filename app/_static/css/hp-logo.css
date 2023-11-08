@@ -1,0 +1,63 @@
+
+mh-logo {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    overflow: hidden;
+    @media (orientation: portrait) {
+        padding: var(--scale-16);
+
+    }
+    @media (orientation: landscape) {
+        padding: var(--scale-64) var(--scale-96)
+    }
+}
+
+
+.hp-logo-inner {
+    background-blend-mode: exclusion;
+    background-color: var(--secondary);
+    position: relative;
+    z-index: 0;
+    transition: filter 175ms ease-in;
+
+    @media (orientation: portrait) {
+        width: 75%;
+        max-width: 500px;
+        height: var(--scale-64);
+    }
+
+    @media (orientation: landscape) {
+        width: 50%;
+        max-width: 1280px;
+        height: var(--scale-160);
+    }
+
+    &.active {
+        filter: blur(50px);
+        transition: filter 175ms ease-out;
+    }
+}
+
+.hp-logo-video {
+    position: absolute;
+    z-index: 1;
+    width: 380px;
+    height: 675px;
+    object-fit: cover;
+    border: var(--secondary) var(--scale-6) solid;
+    transition: opacity 175ms ease-out;
+    background-blend-mode: exclusion;
+    opacity: 0;
+    filter: grayscale(100%);
+
+    &.active {
+        opacity: .6666;
+        transition: opacity 175ms ease-out;
+
+    }
+}

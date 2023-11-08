@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'monument_extendedblack';
+    src: url('../monumentextended-black-webfont.woff2') format('woff2'),
+    url('../monumentextended-black-webfont.woff') format('woff');
+}

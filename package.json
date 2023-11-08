@@ -1,0 +1,30 @@
+{
+  "name": "morningharwood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/static/js/main.cjs",
+  "module": "./dist/static/js/main.module.js",
+  "type": "module",
+  "source": "./dist/static/js/main.js",
+  "exports": {
+    "require": "./dist/static/js/main.cjs",
+    "default": "./dist/static/js/main.module.js"
+  },
+  "mangle": {
+    "regex": "^_"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "concurrently \"microbundle watch\" \"serve\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-eslint": "^9.0.0",
+    "microbundle": "^0.15.1",
+    "prettier": "3.0.3"
+  }
+}

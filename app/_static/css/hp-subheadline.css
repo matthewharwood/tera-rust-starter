@@ -1,0 +1,57 @@
+.hp-subheader {
+    flex: 1;
+    align-items: flex-end;
+
+    @media (orientation: portrait) {
+        display: none;
+    }
+
+    @media (orientation: landscape) {
+        display: flex;
+    }
+}
+
+.hp-subheader-grid {
+    display: grid;
+    gap: var(--scale-32);
+    grid-template-columns: auto 1fr;
+}
+
+.hp-subheader-info-wrapper {
+    display: grid;
+    gap: var(--scale-2);
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: var(--scale-6);
+        top: calc(var(--scale-1) * -1);
+        left: calc(var(--scale-16) * -1);
+        background-color: var(--secondary);
+    }
+}
+
+.hp-subheader-video-wrapper {
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 56px;
+}
+
+.hp-subheader-video {
+    width: 100%;
+}
+
+.hp-subheader-desc {
+    font-size: var(--scale-8);
+}
+
+.hp-subheader-position {
+    font-size: var(--scale-16);
+}
+
+.hp-subheader-company {
+    font-size: var(--scale-10);
+}
